@@ -1,0 +1,45 @@
+coredns:
+  serviceType: LoadBalancer
+  replicaCount: 3
+  isClusterService: false
+  servers:
+    - zones:  
+      - zone: "."
+      port: 53
+      plugins:
+      - name: errors
+      - name: health
+        configBlock: |-
+          lameduck 5s
+
+      - name: ready
+      - name: prometheus
+        parameters: 0.0.0.0:9153
+
+      - name: etcd
+        parameters: k.lachlan.nz
+        configBlock: |-
+          stubzones
+          path /skydns
+          endpoint http://etcd-extdns:2379  
+
+      - name: cache
+        parameters: 5
+      
+      - name: loop
+      - name: reload
+      - name: loadbalance
+      - name: log
+
+external-dns:
+  provider: coredns
+
+etcd:
+  replicaCount: 3
+  fullnameOverride: etcd-extdns
+  persistence:
+    # If etcd fails, then ExternalDNS will repopulate it
+    enabled: false
+  auth:
+    rbac:
+      create: false

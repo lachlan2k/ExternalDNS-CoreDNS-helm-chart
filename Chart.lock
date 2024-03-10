@@ -1,0 +1,12 @@
+dependencies:
+- name: etcd
+  repository: https://charts.bitnami.com/bitnami
+  version: 9.15.2
+- name: external-dns
+  repository: https://charts.bitnami.com/bitnami
+  version: 6.36.1
+- name: coredns
+  repository: https://coredns.github.io/helm
+  version: 1.29.0
+digest: sha256:0b3bf92c97b06052d6aac5d21dabe79f215bc4977cb9765e61109e465c682a7e
+generated: "2024-03-10T11:09:35.162975019Z"
