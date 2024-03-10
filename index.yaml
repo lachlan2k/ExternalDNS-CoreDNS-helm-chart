@@ -1,0 +1,24 @@
+apiVersion: v1
+entries:
+  externaldns-coredns:
+  - apiVersion: v2
+    appVersion: 1.11.1
+    created: "2024-03-10T12:35:54.365409597Z"
+    dependencies:
+    - name: etcd
+      repository: https://charts.bitnami.com/bitnami
+      version: 9.15.2
+    - name: external-dns
+      repository: https://charts.bitnami.com/bitnami
+      version: 6.36.1
+    - name: coredns
+      repository: https://coredns.github.io/helm
+      version: 1.29.0
+    description: A Helm chart for deploying ExternalDNS with CoreDNS and etcd
+    digest: 91478c1042a4d8f544c7c7840cdd08db6b9da75e1aa292e061735d9bd71b04bc
+    name: externaldns-coredns
+    type: application
+    urls:
+    - https://github.com/lachlan2k/ExternalDNS-CoreDNS-helm-chart/releases/download/externaldns-coredns-0.1.1/externaldns-coredns-0.1.1.tgz
+    version: 0.1.1
+generated: "2024-03-10T12:35:54.365420307Z"
