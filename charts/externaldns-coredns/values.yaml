@@ -17,7 +17,7 @@ coredns:
         parameters: 0.0.0.0:9153
 
       - name: etcd
-        parameters: k.lachlan.nz
+        parameters: "."
         configBlock: |-
           stubzones
           path /skydns
