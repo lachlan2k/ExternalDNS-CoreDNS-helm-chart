@@ -29,7 +29,7 @@ dependencies:
   repository: "https://charts.bitnami.com/bitnami"
 
 - name: external-dns
-  version: "6.36.1"
+  version: "8.3.9"
   repository: "https://charts.bitnami.com/bitnami"
 
 - name: coredns
