@@ -25,7 +25,7 @@ appVersion: "1.11.1"
 
 dependencies:
 - name: etcd
-  version: "9.15.2"
+  version: "10.4.1"
   repository: "https://charts.bitnami.com/bitnami"
 
 - name: external-dns
